@@ -1,10 +1,14 @@
-# dotfiles-agents-public
+# takxlz-dist
 
-[takxlz/dotfiles-agents](https://github.com/takxlz/dotfiles-agents)（private）の配布用リポジトリ。
-ファイルは置かず、release の asset だけを使う。
+会社に持ち込む配布物の置き場。ファイルは置かず、release の asset だけを使う。
+元のリポジトリは private で、ここにはログインなしで取れる形で置く。
 
-- `dotfiles-agents.zip` — リポジトリ全体。展開すると `dotfiles-agents/` ができる
-- `update.bat` — Windows 用の取得スクリプト。最新 release の zip を取り、展開先を入れ替える
+release は元リポジトリごとに固定のタグを持ち、更新のたびに作り直す。
+取得は `https://github.com/takxlz/takxlz-dist/releases/download/<タグ>/<asset>` の固定 URL から。
+版は release の題名と notes（元のコミット）で分かる。
 
-最新の release は `https://github.com/takxlz/dotfiles-agents-public/releases/latest/download/<asset>` から取れる。
-release は main への push ごとに元のリポジトリの GitHub Actions が作る。
+| タグ              | 元リポジトリ                                                           | asset                            |
+| ----------------- | ---------------------------------------------------------------------- | -------------------------------- |
+| `dotfiles-agents` | [takxlz/dotfiles-agents](https://github.com/takxlz/dotfiles-agents)    | `dotfiles-agents.zip`、`update.bat` |
+
+release は各元リポジトリの GitHub Actions が main への push ごとに作る。
